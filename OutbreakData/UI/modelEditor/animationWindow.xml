@@ -1,0 +1,62 @@
+<gui version="1">
+    <window name="animationWindow" size="800,120" anchor="bottom,left" padding="0,0,30,0">
+
+        <dropdownlist name="animationType" position="5,3" size="200,20" selectedItemIndex="2">
+            <items>
+                <item text="Standing" value="Standing" />
+                <item text="Running" value="Running" />
+                <item text="Walking" value="Walking" />
+                <item text="Reloading" value="Reloading" />
+                <item text="Shooting1H" value="Shooting1H" />
+                <item text="Shooting2H" value="Shooting2H" />
+                <item text="Lunge1" value="Lunge1" />
+                <item text="Lunge2" value="Lunge2" />
+                <item text="Lunge3" value="Lunge3" />
+                <item text="MeleeWeaponSwing1" value="MeleeWeaponSwing1" />
+                <item text="MeleeWeaponSwing2" value="MeleeWeaponSwing2" />
+                <item text="MeleeWeaponSwing3" value="MeleeWeaponSwing3" />
+                <item text="Drop" value="Drop" />
+                <item text="Pickup" value="Pickup" />
+                <item text="Death1" value="Death1" />
+                <item text="Death2" value="Death2" />
+                <item text="Death3" value="Death3" />
+                <item text="Death4" value="Death4" />
+            </items>
+        </dropdownlist>
+
+        <label position="620,5"><text>Sel. frame:</text></label>
+        <label name="selectedFrameTime" position="700,5"><text>0.00</text></label>
+
+        <button name="animCopy" position="215,3" size="25,25" imageName="animCopy.png" tooltipText="Copy animation" />
+        <button name="animPaste" position="240,3" size="25,25" imageName="animPaste.png" tooltipText="Paste animation" />
+
+        <button name="frameCreate" position="475,3" size="25,25" imageName="keyCreate.png" tooltipText="Create keyframe" />
+
+        <togglebutton name="play" position="300,3" size="25,25" imageName="play.png" tooltipText="Play animation (looped)" toggled="false" />
+
+        <button name="frameSave" position="500,3" size="25,25" imageName="keySave.png" tooltipText="Save pose to keyframe" />
+        <button name="frameLoad" position="525,3" size="25,25" imageName="keyLoad.png" tooltipText="Load pose from keyframe" />
+
+        <button name="frameDelete" position="555,3" size="25,25" imageName="keyDelete.png" tooltipText="Delete selected keyframe" />
+        <button name="frameDuplicate" position="580,3" size="25,25" imageName="keyDuplicate.png" tooltipText="Duplicate selected keyframe" />
+
+        <timeline name="frameTimeline" position="10,30" size="780,40" units="" startValue="0.0" endValue="96.0" majorStep="24" minorStep="12" timelineGroup="animationTimelines">
+            <markers>
+                <marker id="1" position="8" colour="1.0,1.0,0.2,0.4" shape="Square" />
+                <marker id="2" position="18" colour="1.0,0.8,0.2,0.8" shape="Diamond" />
+                <marker id="3" position="16" colour="1.0,0.8,0.2,0.8" shape="Diamond" />
+                <marker id="4" position="48" colour="1.0,0.8,0.2,0.8" shape="Line" />
+            </markers>
+        </timeline>
+
+        <timeline name="secondsTimeline" position="10,75" size="780,40" units="s" startValue="0.0" endValue="4.0" majorStep="1.0" minorStep="0.25" timelineGroup="animationTimelines">
+            <markers>
+                <marker id="1" position="0.33" colour="1.0,1.0,0.2,0.4" shape="Square" />
+                <marker id="2" position="0.75" colour="1.0,0.8,0.2,0.8" shape="Diamond" />
+                <marker id="3" position="0.67" colour="1.0,0.8,0.2,0.8" shape="Diamond" />
+                <marker id="4" position="2" colour="1.0,0.8,0.2,0.8" shape="Line" />
+            </markers>
+        </timeline>
+
+    </window>
+</gui>

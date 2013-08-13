@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gui version="1">
+    <window transparent="true" name="chatbox" anchor="left,bottom" padding="0,0,100,20" size="310, 140" visible="true">
+        <textlist maxlength="6" clickthrough="true" name="chatLines" position="0,0" size="310,140" fontface="Arial" fontsize="16">
+            <rows>
+                <row colour="#00ffff">Welcome to Outbreak.</row>
+            </rows>
+        </textlist>
+        <textbox name="chatInput" background="true" border="false" size="310,20" anchor="left,bottom" visible="false" />
+    </window>
+</gui>

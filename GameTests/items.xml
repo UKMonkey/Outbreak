@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<items>
+    <item id="1" itemType="11" durabilityMax="99" stackMax="30" imageName="ItemImage_M9" cost="2500" name="M9 Beretta">
+        <descriptionText>
+<![CDATA[TEST1
+TEST2
+TEST3
+END]]>
+        </descriptionText>
+    </item>
+    <item id="2" itemType="12" durabilityMax="98" stackMax="128" imageName="ItemImage_9mm" cost="2" name="9mm Ammo">
+        <descriptionText>
+<![CDATA[TEST4
+TEST5
+TEST6
+END]]>
+        </descriptionText>
+    </item>
+</items>

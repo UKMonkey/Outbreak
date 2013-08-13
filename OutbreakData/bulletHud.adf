@@ -1,0 +1,5 @@
+; texture atlas definition
+filename=bulletHud.png
+; TEXTURE=ID:NAME:LEFT,TOP,RIGHT,BOTTOM
+texture=0:bulletNorm:0,0,32,40
+texture=0:bulletDark:33,0,64,40

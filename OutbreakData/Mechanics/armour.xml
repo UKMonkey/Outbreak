@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<armour>
+	<armour>
+		<name>head</name>
+		<multiplier type="Maul" value="0.3"/>
+        	<multiplier type="LowCaliberBullet" value="0.3"/>
+        	<multiplier type="HighCaliberBullet" value="0.3"/>
+        	<multiplier type="BluntMelee" value="0.3"/>
+        	<multiplier type="SharpMelee" value="0.3"/>
+        	<multiplier type="HighExplosion" value="0.2"/>
+        	<multiplier type="Nuclear" value="0.7"/>
+        	<multiplier type="Biological" value="0.5"/>
+        	<multiplier type="Fire" value="0"/>
+        	<multiplier type="Ice" value="0.5"/>
+	</armour>
+	
+	<armour>
+		<name>body</name>
+		<multiplier type="Maul" value="0.7"/>
+        	<multiplier type="LowCaliberBullet" value="0.7"/>
+        	<multiplier type="HighCaliberBullet" value="0.7"/>
+        	<multiplier type="BluntMelee" value="0.7"/>
+        	<multiplier type="SharpMelee" value="0.7"/>
+        	<multiplier type="HighExplosion" value="0.7"/>
+        	<multiplier type="Nuclear" value="0.7"/>
+        	<multiplier type="Biological" value="0.4"/>
+        	<multiplier type="Fire" value="0.4"/>
+        	<multiplier type="Ice" value="0.7"/>
+	</armour>
+	
+	<armour>
+		<name>legs</name>
+		<multiplier type="Maul" value="0.5"/>
+        	<multiplier type="LowCaliberBullet" value="0.5"/>
+        	<multiplier type="HighCaliberBullet" value="0.5"/>
+        	<multiplier type="BluntMelee" value="0.5"/>
+        	<multiplier type="SharpMelee" value="0.5"/>
+        	<multiplier type="HighExplosion" value="0.5"/>
+        	<multiplier type="Nuclear" value="0.2"/>
+        	<multiplier type="Biological" value="0.3"/>
+        	<multiplier type="Fire" value="0.6"/>
+        	<multiplier type="Ice" value="0.5"/>
+	</armour>
+	
+	<armour>
+		<name>feet</name>
+		<multiplier type="Maul" value="0.1"/>
+        	<multiplier type="LowCaliberBullet" value="0.1"/>
+        	<multiplier type="HighCaliberBullet" value="0.1"/>
+        	<multiplier type="BluntMelee" value="0.1"/>
+        	<multiplier type="SharpMelee" value="0.1"/>
+        	<multiplier type="HighExplosion" value="0.4"/>
+        	<multiplier type="Nuclear" value="0.7"/>
+        	<multiplier type="Biological" value="0.7"/>
+        	<multiplier type="Fire" value="0.7"/>
+        	<multiplier type="Ice" value="0.7"/>
+	</armour>
+
+<!-- ______________________________________________________________ -->
+
+	<material>
+		<name>Leather</name>
+		<durability>70</durability>
+		<multiplier type="Maul" value="0.6"/>
+        	<multiplier type="LowCaliberBullet" value="0.1"/>
+        	<multiplier type="HighCaliberBullet" value="0"/>
+        	<multiplier type="BluntMelee" value="0.3"/>
+        	<multiplier type="SharpMelee" value="0.3"/>
+        	<multiplier type="HighExplosion" value="0"/>
+        	<multiplier type="Nuclear" value="0"/>
+        	<multiplier type="Biological" value="0.1"/>
+        	<multiplier type="Fire" value="0.2"/>
+        	<multiplier type="Ice" value="0.4"/>
+	</material>
+	
+	<material>
+		<name>Wool</name>
+		<durability>40</durability>
+		<multiplier type="Maul" value="0.3"/>
+        	<multiplier type="LowCaliberBullet" value="0"/>
+        	<multiplier type="HighCaliberBullet" value="0"/>
+        	<multiplier type="BluntMelee" value="0"/>
+        	<multiplier type="SharpMelee" value="0"/>
+        	<multiplier type="HighExplosion" value="0"/>
+        	<multiplier type="Nuclear" value="0"/>
+        	<multiplier type="Biological" value="0"/>
+        	<multiplier type="Fire" value="0"/>
+        	<multiplier type="Ice" value="0.9"/>
+	</material>
+</armour>

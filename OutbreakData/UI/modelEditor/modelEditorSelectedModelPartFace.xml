@@ -1,0 +1,36 @@
+<gui version="1">
+    <window name="modelEditorSelectedModelFace" size="300,600" anchor="left,top" padding="20,0,0,20">
+        <label size="130,18" anchor="right"><text>Selected Face</text></label>
+
+        <label position="10,30"><text>UV Coordinates</text></label>
+
+
+        <textbox name="topLeftX" position="10,50" size="40,18" />
+        <textbox name="topLeftY" position="60,50" size="40,18" />
+
+        <textbox name="topRightX" position="170,50" size="40,18" />
+        <textbox name="topRightY" position="220,50" size="40,18" />
+
+
+        <uvmapper name="texturePreview" position="20,100" size="256,256" border="false" imageName="grass.jpg" />
+
+        <textbox name="bottomLeftX" position="10,390" size="40,18" />
+        <textbox name="bottomLeftY" position="60,390" size="40,18" />
+
+        <textbox name="bottomRightX" position="170,390" size="40,18" />
+        <textbox name="bottomRightY" position="220,390" size="40,18" />
+
+        <label position="10,450"><text>Colour (A, R, G, B)</text></label>
+        <textbox name="colourA" position="10,480" size="50,18" />
+        <textbox name="colourR" position="65,480" size="50,18" />
+        <textbox name="colourG" position="120,480" size="50,18" />
+        <textbox name="colourB" position="175,480" size="50,18" />
+
+        <button name="copyCoordinates" position="10,360" size="40,20" tooltipText="Copy UV coordinates"><label>Copy</label></button>
+        <button name="pasteCoordinates" position="60,360" size="40,20" tooltipText="Paste UV coordinates"><label>Paste</label></button>
+
+        <button name="rotateCW" position="105,360" imageName="rotCw.png" size="25,25" tooltipText="Rotate Clockwise"></button>
+        <button name="rotateCCW" position="135,360" imageName="rotCcw.png" size="25,25" tooltipText="Rotate Counter-Clockwise"></button>
+
+    </window>
+</gui>

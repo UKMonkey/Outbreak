@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gui version="1">
+  <window name="healthWindow" size="300,60" anchor="left,bottom" renderBackground="false">
+    <healthbar size="200,50" name="healthBar" position="10,0" />
+  </window>
+</gui>

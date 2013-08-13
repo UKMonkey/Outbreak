@@ -1,0 +1,114 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="All" >
+
+  <PropertyGroup>
+    <EngineOutDir>Output\EngineRelease</EngineOutDir>
+    <GameOutDir>Output\ModRelease</GameOutDir>
+    <ZipDir>Output\Zip</ZipDir>
+    <InnoPath>E:\Program Files (x86)\Inno Setup 5\Compil32.exe</InnoPath>
+    <EngineVersion>0.2.0.2</EngineVersion>
+    <GameVersion>0.2.0.2</GameVersion>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
+
+  <Target Name="ClearOutput">
+    <RemoveDir Directories="$(EngineOutDir)" />
+  </Target>
+
+  <Target Name="BuildRelease" DependsOnTargets="ClearOutput">
+    <MSBuild Projects="outbreak.sln" Properties="Configuration=Release;Architecture=x86" />
+  </Target>
+
+  <Target Name="CopyBinaryFiles" DependsOnTargets="BuildRelease">
+    <ItemGroup>
+      <EngineBinaryFiles Include="Builds\Release\*.exe;Builds\Release\*.dll" />
+      <EngineExternalBinaryFiles Include="Builds\Release\External\*.*" />
+      <LauncherBinaryFiles Include="Builds\LauncherRelease\*.exe;Builds\LauncherRelease\*.dll" />
+      <GameBinaryFiles Include="Builds\Release\Mods\outbreak\*.dll" />
+
+      <UnneededPsyDlls Include="$(GameOutDir)\Psy.*" />
+      <UnneededVortexDlls Include="$(GameOutDir)\Vortex.*" />
+      <UnneededLidgrenDlls Include="$(GameOutDir)\Lidgren.*" />
+
+    </ItemGroup>
+    <Copy SourceFiles="@(EngineBinaryFiles)" DestinationFolder="$(EngineOutDir)" />
+    <Copy SourceFiles="@(EngineExternalBinaryFiles)" DestinationFolder="$(EngineOutDir)\External" />
+    <Copy SourceFiles="@(LauncherBinaryFiles)" DestinationFolder="$(EngineOutDir)" />
+    <Copy SourceFiles="@(GameBinaryFiles)" DestinationFolder="$(GameOutDir)" />
+
+    <Delete Files="@(UnneededPsyDlls)" />
+    <Delete Files="@(UnneededVortexDlls)" />
+    <Delete Files="@(UnneededLidgrenDlls)" />
+  </Target>
+
+  <Target Name="DeleteUnneededVSHostFiles">
+    <ItemGroup>
+      <UnneededVSHostFiles Include="$(EngineOutDir)\*vshost*" />
+    </ItemGroup>
+
+    <Delete Files="@(UnneededVSHostFiles)" />
+  </Target>
+
+  <Target Name="CopyLauncher" DependsOnTargets="BuildRelease">
+    <ItemGroup>
+      <LauncherBinaryFiles Include="Builds\LauncherRelease\*.exe;Builds\LauncherRelease\*.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(LauncherBinaryFiles)" DestinationFolder="Output" />
+  </Target>
+
+  <Target Name="CopyAssets">
+    <ItemGroup>
+      <GameModels Include="OutbreakData\**\*.obj;OutbreakData\**\*.mtl" />
+      <GameImages Include="OutbreakData\**\*.png" />
+      <GameSounds Include="OutbreakData\**\*.ogg" />
+      <GameAtlasDefs Include="OutbreakData\**\*.adf;OutbreakData\**\*.adfm" />
+      <GameXml Include="OutbreakData\**\*.xml" />
+      <GameShaders Include="OutbreakData\**\*.fx" />
+
+    </ItemGroup>
+    <Copy SourceFiles="@(GameModels)" DestinationFolder="$(GameOutDir)\Data" />
+    <Copy SourceFiles="@(GameImages)" DestinationFolder="$(GameOutDir)\Data" />
+    <Copy SourceFiles="@(GameSounds)" DestinationFolder="$(GameOutDir)\Data" />
+    <Copy SourceFiles="@(GameAtlasDefs)" DestinationFolder="$(GameOutDir)\Data" />
+    <Copy SourceFiles="@(GameXml)" DestinationFolder="$(GameOutDir)\Data" />
+    <Copy SourceFiles="@(GameShaders)" DestinationFolder="$(GameOutDir)\Data" />
+  </Target>
+
+  <Target Name="CopyConfigurations">
+    <ItemGroup>
+      <ModConfiguration Include="DefaultConfigs\outbreak-mod.cfg" />
+      <ModLauncherConfiguration Include="DefaultConfigs\outbreak-mod-launcher.cfg" />
+      <EngineConfiguration Include="DefaultConfigs\client.cfg;DefaultConfigs\engine.cfg;DefaultConfigs\keybinds.cfg;DefaultConfigs\server.cfg;DefaultConfigs\player.cfg;DefaultConfigs\launcher.cfg" />
+    </ItemGroup>
+    <Copy SourceFiles="@(ModConfiguration)" DestinationFiles="$(GameOutDir)\mod.cfg" />
+    <Copy SourceFiles="@(EngineConfiguration)" DestinationFolder="$(EngineOutDir)" />
+    <Copy SourceFiles="@(ModLauncherConfiguration)" DestinationFiles="$(EngineOutDir)\Mods\outbreak\launcher.cfg" />
+
+  </Target>
+
+  <Target Name="All" DependsOnTargets="CopyBinaryFiles;DeleteUnneededVSHostFiles;CopyAssets;CopyConfigurations">
+
+    <ItemGroup>
+      <EngineZipSource Include="$(EngineOutDir)\**" />
+      <GameZipSource Include="$(GameOutDir)\**" />
+    </ItemGroup>
+
+    <Copy SourceFiles="@(EngineZipSource)" DestinationFiles="@(EngineZipSource->'$(ZipDir)\EngineZipTemp\%(RecursiveDir)%(Filename)%(Extension)')" />
+
+    <ItemGroup>
+      <LauncherFiles Include="$(ZipDir)\EngineZipTemp\Launcher.exe;$(ZipDir)\EngineZipTemp\Ionic.Zip.Dll" />
+      <EngineZipTempSource Include="$(ZipDir)\EngineZipTemp\**" />
+      <ModsDir Include="$(ZipDir)\EngineZipTemp\Mods" />
+    </ItemGroup>
+
+    <RemoveDir Directories="@(ModsDir)" />
+    <Delete Files="@(LauncherFiles)" />
+
+    <Zip Files="@(EngineZipTempSource)" WorkingDirectory="$(ZipDir)\EngineZipTemp" ZipFileName="$(ZipDir)\vortex-$(EngineVersion).zip" />
+    <Zip Files="@(GameZipSource)" WorkingDirectory="$(GameOutDir)" ZipFileName="$(ZipDir)\outbreak-$(GameVersion).zip" />
+
+
+
+  </Target>
+
+</Project>

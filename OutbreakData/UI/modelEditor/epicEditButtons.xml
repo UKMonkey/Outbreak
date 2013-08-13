@@ -1,0 +1,40 @@
+<gui version="1">
+    <window name="epicEditButtons" size="800,30" anchor="bottom,left" padding="0,0,0,0">
+        <button name="newModelButton" position="3,3" size="55,25">
+            <label>New</label>
+        </button>
+
+        <button name="loadModelButton" position="60,3" size="55,25">
+            <label>Load...</label>
+        </button>
+
+        <button name="saveModelButton" position="117,3" size="55,25">
+            <label>Save...</label>
+        </button>
+
+        <button name="addCubeButton" position="200,3" size="25,25" imageName="createCube.png" tooltipText="Create cube [1]" />
+        <button name="addPlaneButton" position="225,3" size="25,25" imageName="createPlane.png" tooltipText="Create plane [2]" />
+
+        <togglebutton name="axisX" position="270,3" size="25,25" imageName="axisX.png" toggled="false" groupName="axisSelect" tooltipText="Select X axis [X]" />
+        <togglebutton name="axisY" position="295,3" size="25,25" imageName="axisY.png" toggled="false" groupName="axisSelect" tooltipText="Select Y axis [Y]" />
+        <togglebutton name="axisZ" position="320,3" size="25,25" imageName="axisZ.png" toggled="false" groupName="axisSelect" tooltipText="Select Z axis [Z]" />
+
+        <togglebutton name="selModeFace" position="370,3" size="25,25" imageName="selFace.png" toggled="false" groupName="selMode" tooltipText="Select object face [F]" />
+        <togglebutton name="selModeObject" position="395,3" size="25,25" imageName="selObject.png" toggled="false" groupName="selMode" tooltipText="Select object [O]" />
+
+        <togglebutton name="sampleLinear" position="440,3" size="25,25" imageName="editButtonLinear.png" toggled="false" groupName="sampleMode" tooltipText="Linear Texture Sampling [P]" />
+        <togglebutton name="samplePoint" position="465,3" size="25,25" imageName="editButtonPoint.png" toggled="false" groupName="sampleMode" tooltipText="Point Texture Sampling [P]" />
+
+        <button name="cloneObjectButton" position="505,3" size="25,25" imageName="cloneObject.png" tooltipText="Clone Object [C]" />
+        <button name="deleteObjectButton" position="530,3" size="25,25" imageName="deleteObject.png" tooltipText="Delete Object [Del]" />
+
+        <togglebutton name="geometryModeButton" groupName="editMode" position="570,3" size="25,25" imageName="mode_edit.png" tooltipText="Edit Mode [F1]" />
+        <togglebutton name="anchorModeButton" groupName="editMode" position="595,3" size="25,25" imageName="mode_anchors.png" tooltipText="Anchor Mode [F2]"  />
+        <togglebutton name="collisionModeButton" groupName="editMode" position="620,3" size="25,25" imageName="mode_collision.png" tooltipText="Collision Mode [F3]"  />
+        <togglebutton name="animationModeButton" groupName="animMode" position="645,3" size="25,25" imageName="mode_anim.png" tooltipText="Animation Mode [F4]" toggled="false" />
+
+
+        <button name="createAnchorButton" position="680,3" size="25,25" imageName="createAnchor.png" tooltipText="Create Anchor [A]" />
+
+    </window>
+</gui>

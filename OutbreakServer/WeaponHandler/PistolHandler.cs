@@ -1,0 +1,42 @@
+﻿using System.Collections.Generic;
+using Outbreak.Net.Messages.FireWeapon;
+using Psy.Core;
+using Vortex.Interface.EntityBase;
+using Outbreak.Items.Containers.InventoryItems;
+using Outbreak.Items.Containers.InventorySpecs.Types;
+
+namespace Outbreak.Server.WeaponHandler
+{
+    public class PistolHandler : BulletShooter
+    {
+        public PistolHandler(GameServer gameServer) :
+            base(new List<WeaponTypes>{WeaponTypes.Pistol}, gameServer)
+        {
+        }
+
+        protected override bool PerformUseImpl(Entity owner, InventoryItem weapon)
+        {
+            var bulletData = Fire(owner, weapon, owner.GetRotation());
+
+            var count = weapon.GetLoadedAmmoCount();
+            weapon.SetLoadedAmmoCount((short)(count - 1));
+
+            var msg = new ServerFirePistolMessage();
+            msg.StartPoint = owner.GetPosition() + DirectionUtil.CalculateVector(owner.GetRotation()) * 0.5f;
+            msg.BulletEffects.Add(bulletData);
+
+            GameServer.Engine.SendMessage(msg);
+
+            return false;
+        }
+
+        protected override bool UpdateFiringWeapon(int entityId, InventoryItem weapon)
+        {
+            return false;
+        }
+
+        protected override void StopPerformUse(Entity owner, InventoryItem weapon)
+        {
+        }
+    }
+}

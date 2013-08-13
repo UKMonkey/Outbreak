@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<gui version="1">
+  <tabbedPanel autoSize="width,height">
+    <tab label="Gameplay">
+      <label position="0,10">
+        <text>Player name</text>
+      </label>
+      <textbox anchor="right" position="0,50" size="240,40">
+        <text>Player(1)</text>
+      </textbox>
+      <multilinelabel position="100,20" size="100,100">
+        <text>
+This is a textbox.
+There is stuff in it.
+Winner.
+        </text>
+      </multilinelabel>
+    </tab>
+    <tab label="Controls">
+      <listbox position="10,100" size="200,200">
+        <columns>
+          <column name="Item" width="140" />
+          <column name="Quantity" width="auto" />
+        </columns>
+        <items>
+          <item>
+            <row name="Item">Pack of bacon</row>
+            <row name="Quantity">3</row>
+          </item>
+          <item>
+            <row name="Item">Baseball bat</row>
+          </item>
+          <item>
+            <row name="Item">9mm ammo</row>
+            <row name="Quantity">214</row>
+          </item>
+        </items>
+      </listbox>
+    </tab>
+    <tab label="Graphics">
+      <togglebutton autoSize="width,height" position="0,0" size="240,40" toggled="true">
+        <label>Use awesome shader</label>
+      </togglebutton>
+    </tab>
+    <tab label="Servers">
+      <button position="0,0" size="220,25">
+        <label>tacgnol.psyogenix.co.uk</label>
+      </button>
+    </tab>
+  </tabbedPanel>
+</gui>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gui version="1">
+  <window name="progressWindow" size="300,30" anchor="HorizontalMiddle,bottom" renderBackground="false">
+    <progressBar size="200,40" name="progressBar" position="10,0" />
+  </window>
+</gui>

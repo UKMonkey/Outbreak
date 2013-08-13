@@ -1,0 +1,83 @@
+<Project DefaultTargets="MakePackage" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
+
+    <PropertyGroup>
+        <OutputPath>Output\Outbreak</OutputPath>
+        <SrcPath>Builds\Release</SrcPath>
+
+    </PropertyGroup>
+
+    <Target Name="MakePackage" DependsOnTargets="BuildRelease;CopyFiles">
+        <ItemGroup>
+            <ZipContents Include="$(OutputPath)" />
+        </ItemGroup>
+
+        <Zip Files="@(ZipContents)" WorkingDirectory="Output\OutbreakZipTemp" ZipFileName="Output\Outbreak.zip" />
+    </Target>
+
+    <Target Name="BuildRelease">
+        <MSBuild Projects="outbreak.sln" Properties="Configuration=Release;Architecture=x86" />
+    </Target>
+
+    <Target Name="ClearOutput">
+        <RemoveDir Directories="$(OutputPath)\Outbreak" />
+    </Target>
+
+    <Target Name="CopyFiles" DependsOnTargets="CopyEngineBinaryFiles;CopyModBinaryFiles;CopyModAssets;CopyConfigs" />
+
+    <Target Name="CopyEngineBinaryFiles" DependsOnTargets="ClearOutput;BuildRelease">
+        <ItemGroup>
+            <EngineExeFiles Include="$(SrcPath)\Vortex.Server.exe;$(SrcPath)\Vortex.Client.exe" />
+            <EngineExeConfigFiles Include="$(SrcPath)\Vortex.Server.exe.config;$(SrcPath)\Vortex.Client.exe.config" />
+            <EngineDllFiles Include="$(SrcPath)\*.dll" />
+            <ExternalFiles Include="$(SrcPath)\External\*.dll" />
+        </ItemGroup>
+
+        <MakeDir Directories="$(OutputPath)\External" />
+
+        <Copy SourceFiles="@(EngineExeFiles)" DestinationFolder="$(OutputPath)" />
+        <Copy SourceFiles="@(EngineExeConfigFiles)" DestinationFolder="$(OutputPath)" />
+        <Copy SourceFiles="@(EngineDllFiles)" DestinationFolder="$(OutputPath)" />
+        <Copy SourceFiles="@(ExternalFiles)" DestinationFolder="$(OutputPath)\External" />
+
+        <Delete Files="$(OutputPath)\OpenTK.dll" />
+
+        <Move SourceFiles="$(OutputPath)\Vortex.Client.exe" DestinationFiles="$(OutputPath)\Outbreak.exe" />
+        <Move SourceFiles="$(OutputPath)\Vortex.Server.exe" DestinationFiles="$(OutputPath)\Server.exe" />
+
+        <Move SourceFiles="$(OutputPath)\Vortex.Client.exe.config" DestinationFiles="$(OutputPath)\Outbreak.exe.config" />
+        <Move SourceFiles="$(OutputPath)\Vortex.Server.exe.config" DestinationFiles="$(OutputPath)\Server.exe.config" />
+
+    </Target>
+
+    <Target Name="CopyModBinaryFiles">
+        <ItemGroup>
+            <ModBinaryFiles Include="$(SrcPath)\Mods\Outbreak\Outbreak*.dll" />
+            <AuxBinaryFiles Include="$(SrcPath)\Mods\Outbreak\BiomeGen.dll" />
+        </ItemGroup>
+
+        <MakeDir Directories="$(OutputPath)\Mods\outbreak" />
+        <Copy SourceFiles="@(ModBinaryFiles)" DestinationFolder="$(OutputPath)\Mods\outbreak\" />
+        <Copy SourceFiles="@(AuxBinaryFiles)" DestinationFolder="$(OutputPath)\Mods\outbreak\" />
+    </Target>
+
+    <Target Name="CopyModAssets">
+        <ItemGroup>
+            <Assets Include="OutbreakData\**\*" />
+        </ItemGroup>
+
+        <MakeDir Directories="$(OutputPath)\Mods\outbreak\Data" />
+
+        <Copy SourceFiles="@(Assets)" DestinationFolder="$(OutputPath)\Mods\outbreak\Data\" />
+    </Target>
+
+    <Target Name="CopyConfigs">
+        <Copy SourceFiles="DefaultConfigs\client.cfg" DestinationFolder="$(OutputPath)\" />
+        <Copy SourceFiles="DefaultConfigs\server.cfg" DestinationFolder="$(OutputPath)\" />
+        <Copy SourceFiles="DefaultConfigs\engine.cfg" DestinationFolder="$(OutputPath)\" />
+        <Copy SourceFiles="DefaultConfigs\keybinds.cfg" DestinationFolder="$(OutputPath)\" />
+        <Copy SourceFiles="DefaultConfigs\outbreak-mod.cfg" DestinationFiles="$(OutputPath)\Mods\outbreak\mod.cfg" />
+    </Target>
+
+</Project>

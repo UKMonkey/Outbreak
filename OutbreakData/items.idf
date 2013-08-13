@@ -1,0 +1,5 @@
+; item definition file
+; ItemSpecID, ItemType, DurabilityMax, StackMax, ThumbnailId, Cost, Name
+
+1,1,0,1,1112,2500,M9 Beretta
+2,2,0,128,1111,10,9mm Ammo

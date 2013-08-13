@@ -1,0 +1,38 @@
+<gui version="1">
+    <window name="modelEditorSelectedModelPart" size="200,300" anchor="right,top" padding="10,10,0,0">
+        <label size="130,18" anchor="right"><text>Selected ModelPart</text></label>
+
+        <label position="10,20"><text>Name</text></label>
+        <textbox name="modelPartName" position="10,40" size="180,18" />
+
+        <label position="10,60"><text>Position</text></label>
+        <textbox name="modelPartPositionX" position="10,80" size="50,18" />
+        <textbox name="modelPartPositionY" position="65,80" size="50,18" />
+        <textbox name="modelPartPositionZ" position="120,80" size="50,18" />
+
+        <label position="10,100"><text>Size</text></label>
+        <textbox name="modelPartSizeX" position="10,120" size="50,18" />
+        <textbox name="modelPartSizeY" position="65,120" size="50,18" />
+        <textbox name="modelPartSizeZ" position="120,120" size="50,18" />
+
+        <label position="10,140"><text>Rotation</text></label>
+        <textbox name="modelPartRotationX" position="10,160" size="50,18" />
+        <textbox name="modelPartRotationY" position="65,160" size="50,18" />
+        <textbox name="modelPartRotationZ" position="120,160" size="50,18" />
+
+        <label position="10,200"><text>Material</text></label>
+        <textbox name="modelPartMaterial" position="10,220" size="160,18" />
+        <button name="materialSelect" position="170,220" size="20,18"><label>...</label></button>
+
+        <button name="modelPartDelete" position="10,270" size="60,25">
+            <label>Delete</label>
+        </button>
+        <button name="modelPartClone" position="70,270" size="60,25">
+            <label>Clone</label>
+        </button>
+
+        <checkbox position="10,250" name="includeInAnimation" value="true" />
+        <label position="24,250"><text>Include in animation</text></label>
+
+    </window>
+</gui>

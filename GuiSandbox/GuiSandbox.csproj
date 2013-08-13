@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F1547C8-5E49-40AC-B870-48562AF89633}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GuiSandbox</RootNamespace>
+    <AssemblyName>GuiSandbox</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Builds\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>guiSandbox.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SlimDX, Version=4.0.12.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EditorWindow.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EpicEdit\EpicEdit.csproj">
+      <Project>{179d70d1-36de-42f2-bff0-ea7e49770491}</Project>
+      <Name>EpicEdit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\SlimMath\SlimMath.csproj">
+      <Project>{820fe441-822f-4519-994b-04f1de27ff15}</Project>
+      <Name>SlimMath</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OutbreakClient\Outbreak.Client.csproj">
+      <Project>{4E80BB0A-3AF7-4237-8A43-93048808537C}</Project>
+      <Name>Outbreak.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vortex.Renderer\Vortex.Renderer.csproj">
+      <Project>{5ABF0CB4-C6B9-42E5-98A8-69CFCBFC85E2}</Project>
+      <Name>Vortex.Renderer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Psy.Core\Psy.Core.csproj">
+      <Project>{F6C48801-4391-4606-BB2A-1C38FABA8A30}</Project>
+      <Name>Psy.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Psy.Graphics\Psy.Graphics.csproj">
+      <Project>{C0220DAC-1CAA-4A47-93E4-106C850D4232}</Project>
+      <Name>Psy.Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Psy.Gui.Renderer\Psy.Gui.Renderer.csproj">
+      <Project>{B977B767-FACE-494B-B7E7-F473F506D4AE}</Project>
+      <Name>Psy.Gui.Renderer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Psy.Gui\Psy.Gui.csproj">
+      <Project>{8AD04E63-795A-4A36-B9CA-EAB859B74166}</Project>
+      <Name>Psy.Gui</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Psy.Windows\Psy.Windows.csproj">
+      <Project>{E96D155C-F3EB-4152-A9F1-9D7A047100C9}</Project>
+      <Name>Psy.Windows</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="guiSandbox.ico" />
+    <Content Include="Layouts\Test1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Layouts\Test2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

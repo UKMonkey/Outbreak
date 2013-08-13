@@ -1,0 +1,2 @@
+batSwing01.ogg : http://www.freesound.org/people/CosmicEmbers/sounds/160756/
+batHit01.ogg   : http://www.freesound.org/people/amsempl/sounds/151975/

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gui version="1">
+    <window name="materialWindow" size="215,380" anchor="horizontalMiddle,verticalMiddle" padding="0,0,0,0" alpha="0.8" visible="true">
+
+        <!-- row 1 -->
+        <matimage name="mat00" position="5,5" size="64,64" imageName="" />
+
+        <matimage name="mat01" position="75,5" size="64,64" imageName="" />
+
+        <matimage name="mat02" position="145,5" size="64,64" imageName="" />
+
+        <!-- row 2 -->
+        <matimage name="mat03" position="5,90" size="64,64" imageName="" />
+
+        <matimage name="mat04" position="75,90" size="64,64" imageName="" />
+
+        <matimage name="mat05" position="145,90" size="64,64" imageName="" />
+
+        <!-- row 3 -->
+        <matimage name="mat06" position="5,175" size="64,64" imageName="" />
+
+        <matimage name="mat07" position="75,175" size="64,64" imageName="" />
+
+        <matimage name="mat08" position="145,175" size="64,64" imageName="" />
+
+        <!-- row 4 -->
+        <matimage name="mat09" position="5,260" size="64,64" imageName="" />
+
+        <matimage name="mat10" position="75,260" size="64,64" imageName="" />
+
+        <matimage name="mat011" position="145,260" size="64,64" imageName="" />
+
+        <button name="addMaterial" position="6,340" size="60,20"><label>Add...</label></button>
+
+        <label name="pageName" position="75,352"><text></text></label>
+
+    </window>
+</gui>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gui version="1">
+  <window name="smallContainerWindow" size="156,108" anchor="right,verticalMiddle" padding="0,180,0,0" alpha="0.8" visible="false">
+
+    <invslot name="chestSlot0" alpha="0.8" position="6,7" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="chestSlot1" alpha="0.8" position="56,7" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="chestSlot2" alpha="0.8" position="106,7" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="chestSlot3" alpha="0.8" position="6,57" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="chestSlot4" alpha="0.8" position="56,57" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="chestSlot5" alpha="0.8" position="106,57" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+
+  </window>
+</gui>

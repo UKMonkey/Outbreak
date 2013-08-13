@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gui version="1">
+    <window name="titleScreenButtons" size="400, 90" anchor="verticalMiddle,horizontalMiddle" transparent="true">
+        <button name="playButton" anchor="left,bottom" size="170,30"><label>Play</label></button>
+        <button name="optionsButton" anchor="right,bottom" size="170,30"><label>Options</label></button>
+    </window>
+</gui>

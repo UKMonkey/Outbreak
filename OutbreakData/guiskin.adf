@@ -1,0 +1,10 @@
+filename=guiskin.png
+texture=0:button_TL:0,0,5,5
+texture=1:button_T:4,0,10,5
+texture=2:button_TR:10,0,16,6
+texture=3:button_L:0,4,5,12
+texture=4:button_R:12,4,16,11
+texture=5:button_BL:0,0,16,16
+texture=6:button_B:0,0,16,16
+texture=7:button_BR:0,0,16,16
+texture=8:button_C:4,4,12,12

@@ -1,0 +1,18 @@
+<Project DefaultTargets="Client;Server" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="Shared">
+    <MsBuild Projects="EngineTests\EngineTests.csproj" Properties="Configuration=Release;Platform=x86" />
+  </Target>
+
+  <Target Name="Client" DependsOnTargets="Shared">
+    <MsBuild Projects="Psy.Graphics.OpenGL\Psy.Graphics.OpenGL.csproj" Properties="Configuration=Release;Platform=x86" />
+    <MsBuild Projects="OutbreakClient\Outbreak.Client.csproj" Properties="Configuration=Release;Platform=x86" />
+    <MsBuild Projects="Vortex.Client\Vortex.Client.csproj" Properties="Configuration=Release;Platform=x86" />
+  </Target>
+
+  <Target Name="Server" DependsOnTargets="Shared">
+    <MsBuild Projects="OutbreakServer\Outbreak.Server.csproj" Properties="Configuration=Release;Platform=x86" />
+    <MsBuild Projects="Vortex.Server\Vortex.Server.csproj" Properties="Configuration=Release;Platform=x86" />
+  </Target>
+</Project>
+

@@ -1,0 +1,36 @@
+<gui version="1">
+    <window name="modelEditorSelectedAnchor" size="200,350" anchor="right,top" padding="330,10,0,0">
+        <label size="130,18" anchor="right"><text>Selected Anchor</text></label>
+
+        <label position="10,20"><text>Name</text></label>
+        <textbox name="anchorName" position="10,40" size="180,18" />
+
+        <label position="10,60"><text>Position</text></label>
+        <textbox name="anchorX" position="10,80" size="50,18" />
+        <textbox name="anchorY" position="65,80" size="50,18" />
+        <textbox name="anchorZ" position="120,80" size="50,18" />
+
+        <label position="10,100"><text>Rotation</text></label>
+        <textbox name="anchorRotX" position="10,120" size="50,18" />
+        <textbox name="anchorRotY" position="65,120" size="50,18" />
+        <textbox name="anchorRotZ" position="120,120" size="50,18" />
+
+        <label position="10,140"><text>Parent Anchor</text></label>
+        <label name="anchorParentAnchorName" position="10,160"><text>PARENT_ANCHOR_NAME</text></label>
+
+        <button name="attachAnchorButton" position="160,160" size="16,16" tooltipText="Attach to parent anchor"><label>AT</label></button>
+        <button name="detachAnchorButton" position="180,160" size="16,16" tooltipText="Detach from parent anchor"><label>DT</label></button>
+
+        <listbox visible="true" name="childAnchorsListbox" position="10,190" size="180,100">
+            <columns>
+                <column name="Child anchors" width="auto" />
+            </columns>
+        </listbox>
+        <button name="detachChildAnchorButton" position="175,300" size="16,16" tooltipText="Detach selected child anchor"><label>DT</label></button>
+
+        <button name="deleteAnchorButton" position="10,310" size="60,25">
+            <label>Delete</label>
+        </button>
+
+    </window>
+</gui>

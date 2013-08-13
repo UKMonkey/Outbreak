@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gui version="1">
+    <window name="joinWindow" size="500,500" anchor="horizontalMiddle,verticalMiddle">
+
+        <label position="20,28"><text>Your Name</text></label>
+        <textbox name="playerName" position="130,20" size="340,30" />
+
+        <button name="playLocally" position="130,90" size="340,50">
+            <label>Play now! (starts a local server)</label>
+        </button>
+
+        <label visible="true" position="20,188"><text>Public servers</text></label>
+
+        <listbox visible="true" name="servers" position="130,188" size="350,150">
+            <columns>
+                <column name="Server Name" width="auto" />
+            </columns>
+        </listbox>
+
+
+        <label position="20,374"><text>Direct connect</text></label>
+        <textbox name="hostname" position="130,368" size="290,30" />
+        <textbox name="port" position="430,368" size="50,30" />
+
+	<label colour="error" name="joinErrorLabel" position="20,405" size="400,30"><text></text></label>
+
+        <button name="directConnectButton" position="290,450" size="190,25">
+            <label>Go!</label>
+        </button>
+
+        <button name="cancelJoinButton" position="20,450" size="140,25">
+            <label>Cancel</label>
+        </button>
+    </window>
+</gui>

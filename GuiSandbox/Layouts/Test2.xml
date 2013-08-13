@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<gui version="1">
+  <window transparent="false" size="320,200" anchor="horizontalMiddle,verticalMiddle">
+    <image name="slot0" size="32,32" position="10,10" imageName="firstaid.png" border="true" draggable="true" />
+    <image name="slot1" size="32,32" position="44,10" imageName="ammocrate.png" border="true" draggable="true" />
+    <image name="slot2" size="32,32" position="10,44" imageName="" border="true" draggable="false" />
+    <image name="slot3" size="32,32" position="44,44" imageName="" border="true" draggable="false" />
+    <slider name="slider" minValue="0" maxValue="100" value="10" position="10,80" size="250,32" />
+    <label name="sliderText" position="10,110" />
+  </window>
+</gui>

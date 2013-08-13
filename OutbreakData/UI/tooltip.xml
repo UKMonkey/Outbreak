@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gui version="1">
+    <window position="0,0" size="0,0" margin="8,8" alpha="0.5">
+        <textlist class="itemSpecDetails" position="0,0" size="0,0" direction="topdown" resizeparent="true">
+            <rows>
+
+            <!--
+
+                <row colour="#00aaff" fontface="arial" fontsize="18">Baseball Bat of Smiting</row>
+                <row colour="#FFBF00" fontface="arial" italic="true" fontsize="16">(Imbued with nails)</row>
+                <row colour="#ffffff" fontface="arial" fontsize="15">2.46 - 4.11 DPS</row>
+                <row colour="#00ff00" fontface="arial" fontsize="15">4 piercing damage on hit</row>
+                <row colour="#00ff00" fontface="arial" fontsize="15">Chance to stun target</row>
+
+
+            -->
+
+            </rows>
+        </textlist>
+    </window>
+</gui>

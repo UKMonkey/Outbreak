@@ -1,0 +1,30 @@
+<gui version="1">
+    <window name="modelEditorSelectedCollisionVolume" size="200,240" anchor="right,top" padding="10,10,0,0">
+        <label size="130,18" anchor="right"><text>Selected Collision Volume</text></label>
+
+        <label position="10,20"><text>Name</text></label>
+        <textbox name="collisionVolumeName" position="10,40" size="180,18" />
+
+        <label position="10,60"><text>Position</text></label>
+        <textbox name="collisionVolumePositionX" position="10,80" size="50,18" />
+        <textbox name="collisionVolumePositionY" position="65,80" size="50,18" />
+        <textbox name="collisionVolumePositionZ" position="120,80" size="50,18" />
+
+        <label position="10,100"><text>Size</text></label>
+        <textbox name="collisionVolumeSizeX" position="10,120" size="50,18" />
+        <textbox name="collisionVolumeSizeY" position="65,120" size="50,18" />
+        <textbox name="collisionVolumeSizeZ" position="120,120" size="50,18" />
+
+        <label position="10,140"><text>Rotation</text></label>
+        <textbox name="collisionVolumeRotationX" position="10,160" size="50,18" />
+        <textbox name="collisionVolumeRotationY" position="65,160" size="50,18" />
+        <textbox name="collisionVolumeRotationZ" position="120,160" size="50,18" />
+
+        <button name="collisionVolumeDelete" position="10,200" size="60,25">
+            <label>Delete</label>
+        </button>
+        <button name="collisionVolumeClone" position="70,200" size="60,25">
+            <label>Clone</label>
+        </button>
+    </window>
+</gui>

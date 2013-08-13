@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<materials>
+    <material id="1" name="outsideGrass" texture="grass.jpg" walkSound="walksound01.ogg" outside="true" />
+    <material id="2" name="wall1" texture="wall01.png" walkSound="walksound01.ogg" outside="true" />
+    <material id="3" name="wall2" texture="wall02.png" walkSound="walksound01.ogg" outside="true" />
+    <material id="4" name="debug" texture="debug.png" walkSound="walksound01.ogg" outside="false" />
+    <material id="5" name="road" texture="road01.jpg" walkSound="walksound01.ogg" outside="true" />
+    <material id="6" name="crops" texture="crops01.png" walkSound="walksound01.ogg" outside="true" />
+    <material id="7" name="woodPanel" texture="woodpanel.jpg" walkSound="walksound01.ogg" outside="false" />
+    <material id="8" name="marbleFloor" texture="marbleFloor.png" walkSound="" outside="true" />
+    <material id="9" name="tiledFloor" texture="tiledFloor.jpg" walkSound="" outside="false" />
+
+
+    <material id="118" name="test01" texture="editorWorkSurface.png" walkSound="" outside="false" />
+    <material id="119" name="test02" texture="testTexture.png" walkSound="" outside="false" />
+    <material id="110" name="wall3" texture="wall03.jpg" walkSound="" outside="false" />
+    <material id="111" name="bed" texture="bed.png" walkSound="" outside="false" />
+    <material id="112" name="face" texture="face.png" walkSound="" outside="false" />
+
+
+    <material id="212" name="wood" texture="wood.png" walkSound="" outside="false" />
+    <material id="213" name="zombie01" texture="zombie.png" walkSound="" outside="false" />
+    <material id="214" name="woodplanks" texture="woodplanks.jpg" walkSound="" outside="false" />
+    <material id="215" name="door" texture="door01.jpg" walkSound="" outside="false" />
+    <material id="216" name="shelves" texture="shelf.jpg" walkSound="" outside="false" />
+    <material id="217" name="stockedShelves" texture="stocked_shelf01.jpg" walkSound="" outside="false" />
+    <material id="218" name="player01" texture="player01.png" walkSound="" outside="false" />
+    <material id="219" name="cricket_bat01" texture="cricket_bat01.png" walkSound="" outside="false" />
+    <material id="220" name="pistol01" texture="pistol01.png" walkSound="" outside="false" />
+    <material id="221" name="tophat01" texture="topHat01.png" walkSound="" outside="false" />
+</materials>

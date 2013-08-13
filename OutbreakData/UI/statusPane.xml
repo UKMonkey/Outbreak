@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gui version="1">
+  <window name="ammoWindow" size="220,55" anchor="right,bottom" renderBackground="false">
+
+    <image name="hungerImg" position="0,0" size="24,24"  imageName="hungerHud.png" />
+    <label name="hungerText" position="24,7" fontface="arial" fontsize="16"><text>Hunger</text></label>
+
+    <image name="ammoImg" position="0,25" size="24,24"  imageName="ammoHud.png" />
+    <label name="ammoText" position="24,31" fontface="arial" fontsize="16"><text>AMMO STATUS</text></label>
+  </window>
+</gui>

@@ -1,0 +1,8 @@
+; texture atlas definition
+filename=tileset1.png
+; TEXTURE=ID:NAME:LEFT,TOP,RIGHT,BOTTOM
+texture=0:grass:1,1,255,255
+texture=1:water:256,1,512,255
+texture=2:sand:1,256,256,511
+texture=3:gravel:256,256,511,511
+texture=4:brick:512,0,768,256

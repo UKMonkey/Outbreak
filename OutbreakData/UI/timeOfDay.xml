@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><gui version="1">    <window name="timeOfDayWindow" size="100,30" anchor="right,top" padding="25,10,0,0" transparent="true">        <label name="timeOfDayLabel" fontface="arial" fontsize="20"><text>00:00 pm</text></label>    </window></gui>

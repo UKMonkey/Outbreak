@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gui version="1">
+  <window name="optionsWindow" size="400,400" anchor="horizontalMiddle,verticalMiddle">
+    
+    <label position="10,34"><text>Master</text></label>
+    <slider name="masterVolume" position="150,30" minValue="0" maxValue="100" value="0" size="225,32" />
+
+    <label position="10,74"><text>Interface</text></label>
+    <slider name="uiVolume" position="150,70" minValue="0" maxValue="100" value="0" size="225,32" />
+
+    <label position="10,114"><text>Music</text></label>
+    <slider name="musicVolume" position="150,110" minValue="0" maxValue="100" value="0" size="225,32" />
+
+    <button name="closeButton" position="10,360" size="140,25">
+      <label>Close</label>
+    </button> 
+  </window>
+</gui>

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0E5C030-5713-42FE-998D-805D5EE6CBE8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EngineTests</RootNamespace>
+    <AssemblyName>EngineTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Vortex\EpicModelTests\AnimatedAnchorTests.cs" />
+    <Compile Include="Vortex\EpicModelTests\CompilingAnimations.cs" />
+    <Compile Include="Vortex\EpicModelTests\CompilingGeometry.cs" />
+    <Compile Include="Vortex\EpicModelTests\FormatBackwardsCompatibilityTests.cs" />
+    <Compile Include="Vortex\EpicModelTests\Performance.cs" />
+    <Compile Include="Vortex\EpicModelTests\PersistenceTests.cs" />
+    <Compile Include="Vortex\EpicModelTests\SetParent.cs" />
+    <Compile Include="Vortex\EpicModelTests\TestMaterialTranslator.cs" />
+    <Compile Include="Vortex\ModelInstanceTests\UpdatingGeometryAndTextureCoordinates.cs" />
+    <Compile Include="Vortex\ModelInstanceTests\UpdatingTranslationsAndRotations.cs" />
+    <Compile Include="Vortex\World\Observable\LightingUnitTests.cs" />
+    <Compile Include="Vortex\World\Observable\TestEntityCache.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EpicEdit\EpicEdit.csproj">
+      <Project>{179d70d1-36de-42f2-bff0-ea7e49770491}</Project>
+      <Name>EpicEdit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Externals\SlimMath\SlimMath.csproj">
+      <Project>{820FE441-822F-4519-994B-04F1DE27FF15}</Project>
+      <Name>SlimMath</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Psy.Graphics\Psy.Graphics.csproj">
+      <Project>{c0220dac-1caa-4a47-93e4-106c850d4232}</Project>
+      <Name>Psy.Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vortex.Interface\Vortex.Interface.csproj">
+      <Project>{6C96625B-4421-40B8-BB3D-9071FAFE1F33}</Project>
+      <Name>Vortex.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vortex\Vortex.csproj">
+      <Project>{D5456FE6-816A-4C47-AD19-0244F1CB56DE}</Project>
+      <Name>Vortex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Psy.Core\Psy.Core.csproj">
+      <Project>{F6C48801-4391-4606-BB2A-1C38FABA8A30}</Project>
+      <Name>Psy.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Vortex\EpicModelTests\ReferenceFormats\emf1.emd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Vortex\EpicModelTests\ReferenceFormats\emf2.emd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Vortex\EpicModelTests\ReferenceFormats\emf3.emd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

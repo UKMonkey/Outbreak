@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{040CCD7F-A0E3-4B8F-B2D9-47EF67828E9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Outbreak</RootNamespace>
+    <AssemblyName>Outbreak</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Builds\Debug\Mods\outbreak\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Builds\Release\Mods\outbreak\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Builds\Debug\Mods\outbreak\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\Builds\Release\Mods\outbreak\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\AudioChannel.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="Effects\BulletEffect.cs" />
+    <Compile Include="Entities\EntityFactoryExtensions.cs" />
+    <Compile Include="Entities\EntityTypeCache.cs" />
+    <Compile Include="Entities\EntityTypeEnum.cs" />
+    <Compile Include="Entities\Behaviours\GameEntityBehaviourEnum.cs" />
+    <Compile Include="GameTime.cs" />
+    <Compile Include="Items\Containers\InventoryType.cs" />
+    <Compile Include="Items\ItemGenerators\ItemGeneratorDictionary.cs" />
+    <Compile Include="Items\ItemTypeEnum.cs" />
+    <Compile Include="Items\WearableItemStatsCache.cs" />
+    <Compile Include="Items\Modifications\FloatModification.cs" />
+    <Compile Include="Items\Modifications\MaterialModification.cs" />
+    <Compile Include="Items\Modifications\ShortModification.cs" />
+    <Compile Include="ModelEquipper.cs" />
+    <Compile Include="Net\Messages\ClientCancelUseItemMessage.cs" />
+    <Compile Include="Net\Messages\ClientInventoryDropToFloor.cs" />
+    <Compile Include="Net\Messages\ClientUseItemMessage.cs" />
+    <Compile Include="Net\Messages\FireWeapon\ServerFireBulletMessage.cs" />
+    <Compile Include="Net\Messages\FireWeapon\ServerFirePistolMessage.cs" />
+    <Compile Include="Net\Messages\FireWeapon\ServerFireSwingWeapon.cs" />
+    <Compile Include="Net\Messages\ServerGameNameMessage.cs" />
+    <Compile Include="Net\Messages\ServerPlayerLevelUpMessage.cs" />
+    <Compile Include="Net\Messages\ServerPlayerXPIncrease.cs" />
+    <Compile Include="Net\Messages\FireWeapon\ServerFireShotgunMessage.cs" />
+    <Compile Include="Net\Messages\ServerShowContainerContentsMessage.cs" />
+    <Compile Include="Net\Messages\ServerStartItemUsage.cs" />
+    <Compile Include="Net\Messages\ServerStopItemUsage.cs" />
+    <Compile Include="OutsideLightingCalculator.cs" />
+    <Compile Include="Resources\Icons.cs" />
+    <Compile Include="Resources\Models.cs" />
+    <Compile Include="Entities\Properties\GameEntityPropertyExtensions.cs" />
+    <Compile Include="Entities\Properties\GameEntityPropertyEnum.cs" />
+    <Compile Include="Enums\MaterialType.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Items\Containers\FloatingItems\IFloatingItemCache.cs" />
+    <Compile Include="Items\Containers\FloatingItems\StaticFloatingItemCache.cs" />
+    <Compile Include="Items\Containers\InventoryItems\InventoryItemExtensions.cs" />
+    <Compile Include="Items\Containers\IInventoryCache.cs" />
+    <Compile Include="Items\Containers\InventoryItems\InventoryItem.cs" />
+    <Compile Include="Items\Containers\InventoryItems\InventoryItemProperty.cs" />
+    <Compile Include="Items\Containers\InventoryItems\InventoryItemPropertyEnum.cs" />
+    <Compile Include="Items\Containers\InventorySpecialSlotEnum.cs" />
+    <Compile Include="Items\Containers\InventorySpecs\Types\AmmoType.cs" />
+    <Compile Include="Items\Containers\InventorySpecs\Types\WeaponTypes.cs" />
+    <Compile Include="Items\Containers\StaticInventoryCache.cs" />
+    <Compile Include="Items\Containers\Inventory.cs" />
+    <Compile Include="Items\Containers\InventorySpecs\IItemSpecCache.cs" />
+    <Compile Include="Items\Containers\InventorySpecs\ItemSpec.cs" />
+    <Compile Include="Items\Containers\InventorySpecs\ItemSpecExtensions.cs" />
+    <Compile Include="Items\Containers\InventorySpecs\ItemSpecProperty.cs" />
+    <Compile Include="Items\Containers\InventorySpecs\ItemSpecPropertyEnum.cs" />
+    <Compile Include="Items\Containers\InventorySpecs\StaticItemSpecCache.cs" />
+    <Compile Include="Items\Modifications\IInventoryItemModification.cs" />
+    <Compile Include="Items\ItemGenerators\ItemGenerator.cs" />
+    <Compile Include="Items\IItemGenerator.cs" />
+    <Compile Include="Items\Modifications\IItemSpecModification.cs" />
+    <Compile Include="Items\Modifications\IntModification.cs" />
+    <Compile Include="Net\Messages\ClientCancelInventoryUpdates.cs" />
+    <Compile Include="Net\Messages\ClientInventoryDragDrop.cs" />
+    <Compile Include="Net\Messages\ClientItemSpecMessage.cs" />
+    <Compile Include="Net\Messages\ClientRequestInventoryUpdates.cs" />
+    <Compile Include="Net\Messages\ClientStartEquippedReload.cs" />
+    <Compile Include="Net\Messages\ClientStopFireWeaponMessage.cs" />
+    <Compile Include="Net\Messages\ClientInteractWithEntityMessage.cs" />
+    <Compile Include="Net\Messages\ServerClientChangeEquippedWeapon.cs" />
+    <Compile Include="Net\Messages\ClientStartFireWeaponMessage.cs" />
+    <Compile Include="Net\Messages\ClientMoveMessage.cs" />
+    <Compile Include="Net\Messages\ClientRequestEntityControlMessage.cs" />
+    <Compile Include="Net\Messages\ClientSuicideMessage.cs" />
+    <Compile Include="Net\Messages\ServerAmmoUpdateMessage.cs" />
+    <Compile Include="Net\Messages\ServerClientEntityControlMessage.cs" />
+    <Compile Include="Net\Messages\FireWeapon\ServerFireWeaponMessage.cs" />
+    <Compile Include="Net\Messages\ServerInventoryStatusMessage.cs" />
+    <Compile Include="Net\Messages\ServerItemSpecMessage.cs" />
+    <Compile Include="Net\Messages\ServerLoadMapMessage.cs" />
+    <Compile Include="Net\Messages\ServerReloadCompleteMessage.cs" />
+    <Compile Include="Net\Messages\ServerReloadWeaponMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Sound.cs" />
+    <Compile Include="Resources\Textures.cs" />
+    <Compile Include="StashSize.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Externals\SlimMath\SlimMath.csproj">
+      <Project>{820FE441-822F-4519-994B-04F1DE27FF15}</Project>
+      <Name>SlimMath</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Psy.Graphics\Psy.Graphics.csproj">
+      <Project>{c0220dac-1caa-4a47-93e4-106c850d4232}</Project>
+      <Name>Psy.Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vortex.Interface\Vortex.Interface.csproj">
+      <Project>{6C96625B-4421-40B8-BB3D-9071FAFE1F33}</Project>
+      <Name>Vortex.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Psy.Core\Psy.Core.csproj">
+      <Project>{F6C48801-4391-4606-BB2A-1C38FABA8A30}</Project>
+      <Name>Psy.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Psy.Gui\Psy.Gui.csproj">
+      <Project>{8AD04E63-795A-4A36-B9CA-EAB859B74166}</Project>
+      <Name>Psy.Gui</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mod.cfg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\Behaviours\OnMove\" />
+    <Folder Include="Entities\Behaviours\OnThinking\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

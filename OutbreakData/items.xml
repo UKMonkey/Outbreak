@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<items>
+    <item id="1" itemType="1" durabilityMax="0" stackMax="1" imageName="ItemImage_M9" cost="2500" name="M9 Beretta">
+        <descriptionText>
+<![CDATA[
+The M9 is a pretty damn good gun.
+
+Unfortunately you can't use two at the same time.
+]]>
+        </descriptionText>
+    </item>
+    <item id="2" itemType="2" durabilityMax="0" stackMax="128" imageName="ItemImage_9mm" cost="2" name="9mm Ammo">
+        <descriptionText>
+<![CDATA[
+9mm ammunition for the M9.
+
+Will damage most zombies and small targets.
+]]>
+        </descriptionText>
+    </item>
+</items>

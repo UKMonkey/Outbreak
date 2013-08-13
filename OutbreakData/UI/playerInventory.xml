@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gui version="1">
+  <window name="inventoryWindow" size="356,446" anchor="left,verticalMiddle" padding="0,0,0,40" alpha="0.8" visible="false">
+
+    <image name="pim" enabled="false" position="100,30" size="256,256" border="false" imageName="playerInventoryMan.png" />
+
+    <invslot name="inventorySlot0" alpha="0.8" position="126,280" size="44,44" margin="6,6" border="true" draggable="false" imageName="" tooltiptext="Primary Weapon" />
+    <invslot name="inventorySlot1" alpha="0.8" position="176,280" size="44,44" margin="6,6" border="true" draggable="false" imageName="" tooltiptext="Secondary Weapon" />
+    
+    <invslot name="inventorySlot2" alpha="0.8" position="30,40" size="44,44" margin="6,6" border="true" draggable="false" imageName="" tooltiptext="Headwear" />
+    <invslot name="inventorySlot3" alpha="0.8" position="30,100" size="44,44" margin="6,6" border="true" draggable="false" imageName="" tooltiptext="Bodywear" />
+    <invslot name="inventorySlot4" alpha="0.8" position="30,160" size="44,44" margin="6,6" border="true" draggable="false" imageName="" tooltiptext="Legwear" />
+    <invslot name="inventorySlot5" alpha="0.8" position="30,220" size="44,44" margin="6,6" border="true" draggable="false" imageName="" tooltiptext="Footwear" />
+
+    <invslot name="inventorySlot10" alpha="0.8" position="6,346" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot11" alpha="0.8" position="56,346" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot12" alpha="0.8" position="106,346" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot13" alpha="0.8" position="156,346" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot14" alpha="0.8" position="206,346" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot15" alpha="0.8" position="256,346" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot16" alpha="0.8" position="306,346" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot17" alpha="0.8" position="6,396" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot18" alpha="0.8" position="56,396" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot19" alpha="0.8" position="106,396" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot20" alpha="0.8" position="156,396" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot21" alpha="0.8" position="206,396" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot22" alpha="0.8" position="256,396" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+    <invslot name="inventorySlot23" alpha="0.8" position="306,396" size="44,44" border="true" margin="6,6" draggable="false" imageName="" />
+
+  </window>
+</gui>

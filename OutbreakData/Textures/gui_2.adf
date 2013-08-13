@@ -1,0 +1,5 @@
+filename=gui_2.png
+texture=0:slider:0,0,12,24
+texture=1:nocheck:13,0,37,24
+texture=2:check:38,0,62,24
+texture=3:slider_rail:0,31,12,34

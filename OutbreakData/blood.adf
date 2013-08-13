@@ -1,0 +1,8 @@
+filename=bloodsplats.png
+texture=0:blood0:0,0,26,57
+texture=1:blood1:25,0,92,38
+texture=2:blood2:0,111,49,174
+texture=3:blood3:90,99,136,153
+texture=4:blood4:57,45,107,75
+texture=5:blood5:90,0,161,48
+texture=6:blood6:44,80,91,113
