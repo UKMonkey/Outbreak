@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Psy.Core.Logging;
 using Vortex.Interface.Serialisation;
 using System.IO;
 using System.Linq;
@@ -109,6 +108,12 @@ namespace Outbreak.Server.Persistance.File.Chunks
                 stream.Write(chunk);
                 var data = stream.ToArray();
                 dataToSave[chunk.Key] = data;
+
+                chunk.ChunkMeshUpdated -= ChunkMeshUpdated;
+                chunk.ChunkMeshUpdated += ChunkMeshUpdated;
+
+                chunk.ChunkBlockUpdated -= ChunkBlockUpdated;
+                chunk.ChunkBlockUpdated += ChunkBlockUpdated;
             }
 
             lock (this)
@@ -118,6 +123,16 @@ namespace Outbreak.Server.Persistance.File.Chunks
                     _chunksToSave[item.Key] = item.Value;
                 }
             }
+        }
+
+        private void ChunkMeshUpdated(Chunk item)
+        {
+            SaveChunks(new List<Chunk>{item});
+        }
+
+        private void ChunkBlockUpdated(Chunk item, int x, int y)
+        {
+            SaveChunks(new List<Chunk>{item});
         }
     }
 }
