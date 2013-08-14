@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vortex.Interface", "Vortex.Interface\Vortex.Interface.csproj", "{6C96625B-4421-40B8-BB3D-9071FAFE1F33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vortex.Interface", "Vortex2\Vortex.Interface\Vortex.Interface.csproj", "{6C96625B-4421-40B8-BB3D-9071FAFE1F33}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lidgren.Network", "Externals\Lidgren.Network\Lidgren.Network.csproj", "{49BA1C69-6104-41AC-A5D8-B54FA9F696E8}"
 EndProject
@@ -8,21 +8,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiSandbox", "GuiSandbox\GuiSandbox.csproj", "{8F1547C8-5E49-40AC-B870-48562AF89633}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Gui", "Psy.Gui\Psy.Gui.csproj", "{8AD04E63-795A-4A36-B9CA-EAB859B74166}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Gui", "Psy\Psy.Gui\Psy.Gui.csproj", "{8AD04E63-795A-4A36-B9CA-EAB859B74166}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vortex", "Vortex\Vortex.csproj", "{D5456FE6-816A-4C47-AD19-0244F1CB56DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vortex", "Vortex2\Vortex\Vortex.csproj", "{D5456FE6-816A-4C47-AD19-0244F1CB56DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vortex.Client", "Vortex.Client\Vortex.Client.csproj", "{5C3246CD-1854-40A5-BCF5-E026805A8C04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vortex.Client", "Vortex2\Vortex.Client\Vortex.Client.csproj", "{5C3246CD-1854-40A5-BCF5-E026805A8C04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vortex.Server", "Vortex.Server\Vortex.Server.csproj", "{E60B4FD0-37E2-4AAA-84B5-2822C809886E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vortex.Server", "Vortex2\Vortex.Server\Vortex.Server.csproj", "{E60B4FD0-37E2-4AAA-84B5-2822C809886E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Windows", "Psy.Windows\Psy.Windows.csproj", "{E96D155C-F3EB-4152-A9F1-9D7A047100C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Windows", "Psy\Psy.Windows\Psy.Windows.csproj", "{E96D155C-F3EB-4152-A9F1-9D7A047100C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Core", "Psy.Core\Psy.Core.csproj", "{F6C48801-4391-4606-BB2A-1C38FABA8A30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Core", "Psy\Psy.Core\Psy.Core.csproj", "{F6C48801-4391-4606-BB2A-1C38FABA8A30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vortex.Renderer", "Vortex.Renderer\Vortex.Renderer.csproj", "{5ABF0CB4-C6B9-42E5-98A8-69CFCBFC85E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vortex.Renderer", "Vortex2\Vortex.Renderer\Vortex.Renderer.csproj", "{5ABF0CB4-C6B9-42E5-98A8-69CFCBFC85E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Graphics", "Psy.Graphics\Psy.Graphics.csproj", "{C0220DAC-1CAA-4A47-93E4-106C850D4232}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Graphics", "Psy\Psy.Graphics\Psy.Graphics.csproj", "{C0220DAC-1CAA-4A47-93E4-106C850D4232}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Externals", "Externals", "{9DC69747-AB70-4FC2-9247-881090C44AD7}"
 EndProject
@@ -36,7 +36,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outbreak", "Outbreak\Outbre
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{2D3CE891-C737-4F47-BC14-A9F2B3A5DD05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Gui.Renderer", "Psy.Gui.Renderer\Psy.Gui.Renderer.csproj", "{B977B767-FACE-494B-B7E7-F473F506D4AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Gui.Renderer", "Psy\Psy.Gui.Renderer\Psy.Gui.Renderer.csproj", "{B977B767-FACE-494B-B7E7-F473F506D4AE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0E211EEB-D33B-441D-983E-05E52DF3D0A2}"
 EndProject
@@ -71,9 +71,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpicEdit", "EpicEdit\EpicEd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlimMath", "Externals\SlimMath\SlimMath.csproj", "{820FE441-822F-4519-994B-04F1DE27FF15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Graphics.DirectX", "Psy.Graphics.DirectX\Psy.Graphics.DirectX.csproj", "{7ADEACAE-E687-49F9-8550-F8F28D964F77}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Graphics.DirectX", "Psy\Psy.Graphics.DirectX\Psy.Graphics.DirectX.csproj", "{7ADEACAE-E687-49F9-8550-F8F28D964F77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Graphics.OpenGL", "Psy.Graphics.OpenGL\Psy.Graphics.OpenGL.csproj", "{BED646D7-37DC-4734-A152-2ED934B6E29D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Psy.Graphics.OpenGL", "Psy\Psy.Graphics.OpenGL\Psy.Graphics.OpenGL.csproj", "{BED646D7-37DC-4734-A152-2ED934B6E29D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickFont", "Externals\QuickFont\QuickFont.csproj", "{BBECE6FC-EF63-40F8-A734-A500D1DFC1AF}"
 EndProject

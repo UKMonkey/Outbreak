@@ -1,0 +1,9 @@
+[submodule "Psy"]
+	path = Psy
+	url = ../Psy.git
+[submodule "Vortex2"]
+	path = Vortex2
+	url = ../Vortex.git
+[submodule "Externals2"]
+	path = Externals2
+	url = ../Externals.git
