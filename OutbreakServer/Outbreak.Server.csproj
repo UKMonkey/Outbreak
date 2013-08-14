@@ -191,11 +191,11 @@
       <Project>{820FE441-822F-4519-994B-04F1DE27FF15}</Project>
       <Name>SlimMath</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Psy.Graphics\Psy.Graphics.csproj">
+    <ProjectReference Include="..\Psy\Psy.Graphics\Psy.Graphics.csproj">
       <Project>{C0220DAC-1CAA-4A47-93E4-106C850D4232}</Project>
       <Name>Psy.Graphics</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Vortex.Interface\Vortex.Interface.csproj">
+    <ProjectReference Include="..\Vortex\Vortex.Interface\Vortex.Interface.csproj">
       <Project>{6C96625B-4421-40B8-BB3D-9071FAFE1F33}</Project>
       <Name>Vortex.Interface</Name>
     </ProjectReference>
@@ -203,7 +203,7 @@
       <Project>{040CCD7F-A0E3-4B8F-B2D9-47EF67828E9B}</Project>
       <Name>Outbreak</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Psy.Core\Psy.Core.csproj">
+    <ProjectReference Include="..\Psy\Psy.Core\Psy.Core.csproj">
       <Project>{F6C48801-4391-4606-BB2A-1C38FABA8A30}</Project>
       <Name>Psy.Core</Name>
     </ProjectReference>

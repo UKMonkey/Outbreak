@@ -89,23 +89,23 @@
       <Project>{040CCD7F-A0E3-4B8F-B2D9-47EF67828E9B}</Project>
       <Name>Outbreak</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Psy.Graphics\Psy.Graphics.csproj">
+    <ProjectReference Include="..\Psy\Psy.Graphics\Psy.Graphics.csproj">
       <Project>{C0220DAC-1CAA-4A47-93E4-106C850D4232}</Project>
       <Name>Psy.Graphics</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Vortex.Client\Vortex.Client.csproj">
+    <ProjectReference Include="..\Vortex\Vortex.Client\Vortex.Client.csproj">
       <Project>{5C3246CD-1854-40A5-BCF5-E026805A8C04}</Project>
       <Name>Vortex.Client</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Vortex.Interface\Vortex.Interface.csproj">
+    <ProjectReference Include="..\Vortex\Vortex.Interface\Vortex.Interface.csproj">
       <Project>{6C96625B-4421-40B8-BB3D-9071FAFE1F33}</Project>
       <Name>Vortex.Interface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Vortex\Vortex.csproj">
+    <ProjectReference Include="..\Vortex\Vortex\Vortex.csproj">
       <Project>{D5456FE6-816A-4C47-AD19-0244F1CB56DE}</Project>
       <Name>Vortex</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Psy.Core\Psy.Core.csproj">
+    <ProjectReference Include="..\Psy\Psy.Core\Psy.Core.csproj">
       <Project>{F6C48801-4391-4606-BB2A-1C38FABA8A30}</Project>
       <Name>Psy.Core</Name>
     </ProjectReference>

@@ -62,7 +62,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Psy.Core\Psy.Core.csproj">
+    <ProjectReference Include="..\..\Psy\Psy.Core\Psy.Core.csproj">
       <Project>{F6C48801-4391-4606-BB2A-1C38FABA8A30}</Project>
       <Name>Psy.Core</Name>
     </ProjectReference>
