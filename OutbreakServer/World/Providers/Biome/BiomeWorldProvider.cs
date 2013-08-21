@@ -24,7 +24,7 @@ namespace Outbreak.Server.World.Providers.Biome
         /// <summary>
         /// World size of a Biome
         /// </summary>
-        protected float BiomeWorldSize { get { return Chunk.ChunkWorldSize*BiomeChunkSize; } }
+        protected float BiomeWorldSize { get { return GameServer.Engine.ChunkWorldSize * BiomeChunkSize; } }
 
         /// <summary>
         /// Seed being used to generate the biome
@@ -49,18 +49,18 @@ namespace Outbreak.Server.World.Providers.Biome
             var availableChunks = GetChunksForBiome(biomeKey);
             var bottomLeftKey = availableChunks[0][0];
 
-            var chunkModification = new Vector3((key.X - bottomLeftKey.X) * Chunk.ChunkWorldSize,
-                                               (key.Y - bottomLeftKey.Y) * Chunk.ChunkWorldSize, 0);
+            var chunkModification = new Vector3((key.X - bottomLeftKey.X) * GameServer.Engine.ChunkWorldSize,
+                                               (key.Y - bottomLeftKey.Y) * GameServer.Engine.ChunkWorldSize, 0);
             return chunkExtra + chunkModification;
         }
 
         public void BiomeVectorToChunkVector(BiomeKey key, Vector3 biomeExtra, out ChunkKey chunkKey, out Vector3 chunkExtra)
         {
-            var extraX = Math.Floor((biomeExtra.X-Chunk.ChunkWorldSize) / Chunk.ChunkWorldSize) + 1;
-            var extraY = Math.Floor((biomeExtra.Y-Chunk.ChunkWorldSize) / Chunk.ChunkWorldSize) + 1;
+            var extraX = Math.Floor((biomeExtra.X - GameServer.Engine.ChunkWorldSize) / GameServer.Engine.ChunkWorldSize) + 1;
+            var extraY = Math.Floor((biomeExtra.Y - GameServer.Engine.ChunkWorldSize) / GameServer.Engine.ChunkWorldSize) + 1;
 
-            chunkExtra = new Vector3((float)(biomeExtra.X - extraX * Chunk.ChunkWorldSize),
-                                    (float)(biomeExtra.Y - extraY * Chunk.ChunkWorldSize),
+            chunkExtra = new Vector3((float)(biomeExtra.X - extraX * GameServer.Engine.ChunkWorldSize),
+                                    (float)(biomeExtra.Y - extraY * GameServer.Engine.ChunkWorldSize),
                                     biomeExtra.Z);
 
             chunkKey = new ChunkKey((int)(key.X * BiomeChunkSize + extraX),
@@ -105,15 +105,15 @@ namespace Outbreak.Server.World.Providers.Biome
          * Note that the provider should either create a new random generator for each chunk or avoid doing any
          * randomness, as the keys passed in may be in any order for any biome
          */
-        protected IEnumerable<Chunk> GetChunks(BiomeKey biomeKey, IEnumerable<ChunkKey> keys, IEnumerable<BuildingData> buildings, IChunkMeshProvider chunkMeshProvider)
+        protected IEnumerable<IChunk> GetChunks(BiomeKey biomeKey, IEnumerable<ChunkKey> keys, IEnumerable<BuildingData> buildings, IChunkMeshProvider chunkMeshProvider)
         {
-            var ret = new List<Chunk>();
+            var ret = new List<MeshOnlyChunk>();
             var buildingList = buildings.ToList();
             foreach (var chunkKey in keys)
             {
                 var mesh = GenerateChunkMesh(biomeKey, chunkKey, buildingList, chunkMeshProvider);
                 var lights = buildingList.SelectMany(item => item.GetLightsForChunk(chunkKey)).ToList();
-                var chunk = new Chunk(chunkKey, mesh, lights);
+                var chunk = new MeshOnlyChunk(chunkKey, mesh, lights);
 
                 ret.Add(chunk);
             }

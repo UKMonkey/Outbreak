@@ -96,7 +96,7 @@ namespace Outbreak.Server.World.Triggers
 
             var entities = Engine.GetEntitiesInChunk(UniqueKey.ChunkLocation);
             var countInArea = entities.Count(item => item.GetIsZombie());
-            var countToSpawn = (int)Math.Floor((Chunk.ChunkWorldSize * Chunk.ChunkWorldSize * Density) - countInArea);
+            var countToSpawn = (int)Math.Floor((Engine.ChunkWorldSize * Engine.ChunkWorldSize * Density) - countInArea);
 
             if (countToSpawn <= 0)
                 return;

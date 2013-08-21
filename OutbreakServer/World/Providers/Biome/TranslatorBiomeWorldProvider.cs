@@ -114,9 +114,9 @@ namespace Outbreak.Server.World.Providers.Biome
             Generator ret;
             var seed = GetBiomeRandomSeed(biomeKey);
             if (Math.Cos(seed) < 0)
-                ret = new FarmGenerator((int)Chunk.ChunkWorldSize, BiomeChunkSize, 1.0f);
-            else 
-                ret = new SuburbGenerator((int)Chunk.ChunkWorldSize, BiomeChunkSize, 1.0f);
+                ret = new FarmGenerator(GameServer.Engine.ChunkWorldSize, BiomeChunkSize, 1.0f);
+            else
+                ret = new SuburbGenerator(GameServer.Engine.ChunkWorldSize, BiomeChunkSize, 1.0f);
 
             ret.Generate(seed);
             return ret;

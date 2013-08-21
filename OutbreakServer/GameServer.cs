@@ -51,6 +51,8 @@ using Psy.Core.Tasks;
 using EntityHandler = Outbreak.Server.Persistance.File.Entites.EntityHandler;
 using EntityTypeEnum = Outbreak.Entities.EntityTypeEnum;
 using GameEntityBehaviourEnum = Outbreak.Entities.Behaviours.GameEntityBehaviourEnum;
+using System.Collections.Generic;
+using Vortex.Interface.World.Blocks;
 
 namespace Outbreak.Server
 {
@@ -470,6 +472,16 @@ namespace Outbreak.Server
         public Entity GetEntityForRemotePlayer(RemotePlayer remotePlayer)
         {
             return Engine.GetEntity(remotePlayer);
+        }
+
+        public IEnumerable<BlockProperties> GetBlockTypes()
+        {
+            yield break;
+        }
+
+        public short GetChunkWorldSize()
+        {
+            return 16;
         }
     }
 }

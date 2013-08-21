@@ -22,7 +22,7 @@ namespace Outbreak.Server.Persistance.File.Chunks
         {
         }
 
-        private Chunk LoadChunk(ChunkKey key)
+        private IChunk LoadChunk(ChunkKey key)
         {
             var path = Utils.GetPathForChunk(Game, key);
             var fullFilePath = path + TargetFilename;
@@ -33,7 +33,7 @@ namespace Outbreak.Server.Persistance.File.Chunks
             try
             {
                 var file = new FileStream(fullFilePath, FileMode.Open);
-                var chunk = file.ReadChunk();
+                var chunk = file.ReadChunk(Game.Engine);
                 file.Close();
                 file.Dispose();
                 return chunk;
@@ -48,7 +48,7 @@ namespace Outbreak.Server.Persistance.File.Chunks
 
         private void LoadChunkSetFromDisk(List<ChunkKey> keys)
         {
-            var chunks = new List<Chunk>(keys.Count);
+            var chunks = new List<IChunk>(keys.Count);
             var unavailable = new List<ChunkKey>(keys.Count);
             foreach (var key in keys)
             {

@@ -102,13 +102,13 @@ namespace Outbreak.Server.World.Providers
 #region chunks
         public abstract void LoadChunks(List<ChunkKey> chunkKeys);
 
-        protected virtual void ChunksLoaded(List<Chunk> chunks)
+        protected virtual void ChunksLoaded(List<IChunk> chunks)
         {
             if (OnChunkLoad != null)
                 OnChunkLoad(chunks);
         }
 
-        protected virtual void ChunksGenerated(List<Chunk> chunks)
+        protected virtual void ChunksGenerated(List<IChunk> chunks)
         {
             if (OnChunksGenerated != null)
                 OnChunksGenerated(chunks);

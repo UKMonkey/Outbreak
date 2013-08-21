@@ -35,7 +35,7 @@ namespace Outbreak.Server.World.Providers.Biome
 
             foreach (var chunk in chunks)
             {
-                var position = new Vector3(Chunk.ChunkWorldSize / 2, Chunk.ChunkWorldSize / 2, -1.8f);
+                var position = new Vector3(GameServer.Engine.ChunkWorldSize / 2f, GameServer.Engine.ChunkWorldSize / 2f, -1.8f);
                 var light = new Light(position, 2f,
                                  new Color4(0.4f, 0.4f, 0.4f, 0.4f));
                 chunk.Lights.Add(light);
@@ -97,7 +97,7 @@ namespace Outbreak.Server.World.Providers.Biome
             if (expectedChunks.Contains(new ChunkKey(-2, -2)))
             {
                 var zombie = GameServer.EntityFactory.Get((short) EntityTypeEnum.Zombie);
-                zombie.SetPosition(new Vector3(-1.6f*Chunk.ChunkWorldSize, -1.6f*Chunk.ChunkWorldSize, 0));
+                zombie.SetPosition(new Vector3(-1.6f * GameServer.Engine.ChunkWorldSize, -1.6f * GameServer.Engine.ChunkWorldSize, 0));
                 entities[new ChunkKey(-2, -2)].Add(zombie);
             }
 

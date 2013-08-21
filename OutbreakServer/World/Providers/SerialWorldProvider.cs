@@ -87,13 +87,13 @@ namespace Outbreak.Server.World.Providers
                 _chunksReported.Remove(key);
         }
 
-        protected override void ChunksLoaded(List<Chunk> chunks)
+        protected override void ChunksLoaded(List<IChunk> chunks)
         {
             ClearChunkKeys(chunks.Select(item => item.Key));
             base.ChunksLoaded(chunks);
         }
 
-        protected override void ChunksGenerated(List<Chunk> chunks)
+        protected override void ChunksGenerated(List<IChunk> chunks)
         {
             ClearChunkKeys(chunks.Select(item => item.Key));
             base.ChunksGenerated(chunks);

@@ -16,6 +16,7 @@ using Outbreak.Items.Containers.InventorySpecs;
 using Psy.Core.Input;
 using Psy.Core.Logging;
 using Psy.Core.StateMachine;
+using Vortex.Interface.World.Blocks;
 
 namespace Outbreak.Client
 {
@@ -211,6 +212,11 @@ namespace Outbreak.Client
         {
             StateMachine.CurrentState.OnFocusChange(entity);
             _entityWatcher = new EntityWatcher(Engine, entity);
+        }
+
+        public BlockProperties GetDefaultBlock()
+        {
+            return null;
         }
     }
 }
